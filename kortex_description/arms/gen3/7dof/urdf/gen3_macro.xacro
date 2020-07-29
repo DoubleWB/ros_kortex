@@ -317,7 +317,7 @@
       <gazebo>
         <include>
           <uri>model://realsense_camera</uri>
-          <pose>-0.045 0.04 1.185 1.57 -1.57 0</pose>
+          <pose>0.045 0.04 1.185 -1.57 -1.57 0</pose>
         </include>
         <joint name="camera_joint" type="fixed">
           <child>realsense_camera::link</child>
