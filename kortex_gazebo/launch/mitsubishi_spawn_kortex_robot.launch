@@ -9,7 +9,7 @@
     <!-- Initial position in Gazebo -->
     <arg name="x0" default="-0.35"/>
     <arg name="y0" default="0.0"/>
-    <arg name="z0" default="1.02"/>
+    <arg name="z0" default="1.03"/>
 
     <!-- Arm and gripper type -->
     <arg name="arm" default="gen3"/>
