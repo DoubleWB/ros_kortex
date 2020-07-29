@@ -314,6 +314,16 @@
     </joint>
     <xacro:if value="${vision}">
       <link name="${prefix}camera_link" />
+      <gazebo>
+        <include>
+          <uri>model://realsense_camera</uri>
+          <pose>-0.045 0.04 1.185 1.57 -1.57 0</pose>
+        </include>
+        <joint name="camera_joint" type="fixed">
+          <child>realsense_camera::link</child>
+          <parent>camera_link</parent>
+        </joint>
+      </gazebo>
       <joint name="${prefix}camera_module" type="fixed">
         <origin xyz="0 0.05639 -0.00305" rpy="3.14159265358979 3.14159265358979 0" />
         <parent link="${prefix}end_effector_link" />
