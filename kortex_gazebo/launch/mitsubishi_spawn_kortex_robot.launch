@@ -51,7 +51,7 @@
     <!-- <rosparam command="load" file="$(find kortex_description)/arms/$(arg arm)/$(arg dof)dof/config/gazebo_initial_joint_positions.yaml"/> -->
     <!-- <param name="initial_positions" value=""/> TODO -->
     <!-- Without gripper -->
-    <node pkg="tf" type="static_transform_publisher" name="camera_tf_publisher" args="0.5 -0.2 0.55 1.57 1.70 -1.57 /base_link /camera 100"/>
+    <!-- <node pkg="tf" type="static_transform_publisher" name="camera_tf_publisher" args="0.5 -0.2 0.55 1.57 1.70 -1.57 /base_link /camera 100"/>
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
         args="-urdf -param robot_description -model $(arg robot_name) -x $(arg x0) -y $(arg y0) -z $(arg z0)
             -J joint_1 1.57
@@ -61,9 +61,9 @@
             -J joint_5 0
             -J joint_6 -1.00
             -J joint_7 1.57"  
-        if="$(eval not arg('gripper'))"/> <!--TODO-->
+        if="$(eval not arg('gripper'))"/> TODO -->
     <!-- With gripper -->
-    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+    <!-- <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
     args="-urdf -param robot_description -model $(arg robot_name) -x $(arg x0) -y $(arg y0) -z $(arg z0)
         -J joint_1 1.57
             -J joint_2 0.35
@@ -72,7 +72,7 @@
             -J joint_5 0
             -J joint_6 -1.00
             -J joint_7 1.57"
-    unless="$(eval not arg('gripper'))"/> <!--TODO-->
+    unless="$(eval not arg('gripper'))"/> TODO -->
 
     <!-- Load controller configuration file from kortex_control package -->
     <rosparam file="$(find kortex_control)/arms/$(arg arm)/$(arg dof)dof/config/joint_position_controllers.yaml" command="load"/>

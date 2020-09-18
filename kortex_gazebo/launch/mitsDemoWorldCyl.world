@@ -887,5 +887,9 @@
       <allow_auto_disable>1</allow_auto_disable>
       <pose frame=''>0 0.6 1.08 1.57 -1.57 0</pose>
     </model>
+    <include>
+      <uri>model://will_gen_3</uri>
+      <pose>-0.35 0 1.03 0 0 0</pose>
+    </include>
   </world>
 </sdf>
