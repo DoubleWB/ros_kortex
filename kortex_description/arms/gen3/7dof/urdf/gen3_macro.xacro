@@ -399,7 +399,11 @@
         xyz="0 0 0" />
     </joint>
     <xacro:if value="${vision}">
-      <link name="${prefix}camera_link" />
+			<link name="${prefix}camera_link"/>
+			<xacro:include filename="$(find realsense_gazebo_plugin)/urdf/realsense-RS200.macro.xacro"/>
+	    <xacro:realsense-rs200 prefix="${prefix}" parent="camera_link">
+				<origin xyz="0.0 0.0 0.01" rpy="0 -1.57 1.57" />   
+	    </xacro:realsense-rs200>
       <joint name="${prefix}camera_module" type="fixed">
         <origin xyz="0 0.05639 -0.00305" rpy="3.14159265358979 3.14159265358979 0" />
         <parent link="${prefix}end_effector_link" />
